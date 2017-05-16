@@ -26,7 +26,7 @@ namespace arithmetic_parser {
         Token(char ch, double val);
         Token(const Token& orig);
         virtual ~Token();
-        char getCh() const;
+        char getKind() const;
         double getValue() const;
 
     private:

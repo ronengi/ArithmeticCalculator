@@ -34,7 +34,7 @@ namespace arithmetic_parser {
     }
 
 
-    char Token::getCh() const {
+    char Token::getKind() const {
         return this->kind;
     }
 
@@ -48,7 +48,7 @@ namespace arithmetic_parser {
 
 
     std::ostream& operator<<(std::ostream& os, const Token& tk) {
-        return os << "{" << tk.getCh() << ": " << tk.getValue() << "}";
+        return os << "{" << tk.getKind() << ": " << tk.getValue() << "}";
     }
 
 
