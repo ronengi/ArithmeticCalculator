@@ -14,6 +14,7 @@
 #include <cstdlib>
 #include <iostream>
 #include "Token.hpp"
+#include "ArithmeticParser.hpp"
 
 
 /*
@@ -21,8 +22,10 @@
  */
 int main(int argc, char** argv) {
 
-    arithmetic_parser::Token t1('8', 3.00);
-    std::cout << t1 << std::endl;
+    // arithmetic_parser::Token t1('8', 3.00);
+    // std::cout << t1 << std::endl;
+
+    arithmetic_parser::ArithmeticParser ap = arithmetic_parser::ArithmeticParser();
 
     return 0;
 }
