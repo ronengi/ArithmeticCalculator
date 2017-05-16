@@ -16,11 +16,6 @@
 #include "TokenStream.hpp"
 
 
-#define PRINT '='
-#define QUIT 'x'
-#define PROMPT "enter expression:  "
-
-
 namespace arithmetic_parser {
 
     
@@ -28,8 +23,8 @@ namespace arithmetic_parser {
     : full(false), buffer(0) {}
 
     
-    TokenStream::TokenStream(const TokenStream& orig) {
-    }
+    TokenStream::TokenStream(const TokenStream& orig)
+    : full(orig.full), buffer(orig.buffer) {}
 
     
     TokenStream::~TokenStream() {
@@ -42,6 +37,7 @@ namespace arithmetic_parser {
         buffer = tk;
         full = true;
     }
+
 
     Token TokenStream::get() {
         if (full) {
@@ -66,7 +62,7 @@ namespace arithmetic_parser {
             default:
                 throw std::runtime_error("Bad token");
         }
-
     }
     
+
 } // arithmetic_parser

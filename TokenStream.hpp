@@ -15,7 +15,12 @@
 #define TOKENSTREAM_HPP
 
 
+#define PRINT '='
+#define QUIT 'x'
+
+
 #include "Token.hpp"
+
 
 namespace arithmetic_parser {
     
@@ -25,7 +30,7 @@ namespace arithmetic_parser {
         TokenStream(const TokenStream& orig);
         virtual ~TokenStream();
         Token get();
-        void putback(Token t);
+        void putback(Token tk);
     private:
         bool full;
         Token buffer;
